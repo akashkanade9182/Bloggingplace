@@ -1,0 +1,8 @@
+.navbarbox{
+    width: 98%;
+    margin: auto;
+    height:50px;
+    color:white;
+    background: linear-gradient(270deg, #BF34FB 0%, #552EFA 100%);
+border-radius: 25px;
+}

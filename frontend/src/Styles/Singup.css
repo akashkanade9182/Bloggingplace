@@ -1,0 +1,72 @@
+.flash_one{
+    position: absolute;
+width: 644px;
+height: 644px;
+left: -123px;
+top: -322px;
+
+background: rgba(129, 94, 220, 0.45);
+filter: blur(282px);
+
+}
+.flash_two{
+
+position: absolute;
+width: 644px;
+height: 644px;
+left: 664px;
+top: -488px;
+
+background: rgba(129, 94, 220, 0.45);
+filter: blur(282px);
+}
+.signupbox{
+    position: absolute;
+width: 414px;
+height: 590px;
+left: 413px;
+top: 85px;
+
+background: rgba(255, 255, 255, 0.06);
+backdrop-filter: blur(2px);
+/* Note: backdrop-filter has minimal browser support */
+
+border-radius: 12px;
+}
+.heading{
+    width: fit-content;
+    margin: auto;
+    margin-top: 20px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 90px;
+    line-height: 120%;
+    /* identical to box height, or 108px */
+    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    background: linear-gradient(99.04deg, #BF34FB -3.58%, #552EFA 82.06%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+   
+  
+}
+.signupbtn{
+    width: 100%;
+    outline: none;
+	font-size: 17px;
+	font-weight: bold;
+	background: transparent;
+	padding: 10px;
+	border: 1px solid blueviolet;
+	border-radius: 2px;
+	cursor: pointer;
+    color:white;
+    background: linear-gradient(270deg, #BF34FB 0%, #552EFA 100%);
+    margin-top:20px;
+    border-radius: 7px;
+
+}
