@@ -1,0 +1,81 @@
+.container {
+	width: 45%;
+    height:200px;
+	border: 1px solid blueviolet;
+	border-radius: 2px;
+	padding: 10px 5px;
+	margin: 5px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+    
+background: #272150;
+}
+.flasher{
+    position: absolute;
+width: 330px;
+height: 105px;
+left: 566px;
+top: 2260px;
+
+/* Gradients */
+
+background: linear-gradient(270deg, #BF34FB 0%, #552EFA 100%);
+filter: blur(62px);
+}
+
+.input {
+	display: none;
+}
+
+audio {
+	width: 200px;
+	height: 40px;
+	border-radius: 2px;
+}
+
+.Choosebutton {
+	outline: none;
+	font-size: 14px;
+	font-weight: bold;
+	background: transparent;
+	padding: 10px;
+	border: 1px solid blueviolet;
+	border-radius: 2px;
+	cursor: pointer;
+    color:white;
+    background: linear-gradient(270deg, #BF34FB 0%, #552EFA 100%);
+}
+.Uploadbutton {
+	outline: none;
+	font-size: 14px;
+	font-weight: bold;
+	background: transparent;
+	padding: 10px;
+	border: 1px solid blueviolet;
+	border-radius: 2px;
+	cursor: pointer;
+    color:white;
+    background: linear-gradient(270deg, #BF34FB 0%, #552EFA 100%);
+    border-radius: 15px;
+}
+
+.preview_img {
+	width: 100px;
+	height: 100px;
+	object-fit: contain;
+}
+
+.progress_container {
+	width: 100px;
+	display: flex;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+    color:white
+}
+
+.check_img {
+	width: 40px;
+	height: 40px;
+}

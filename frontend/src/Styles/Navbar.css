@@ -6,3 +6,8 @@
     background: linear-gradient(270deg, #BF34FB 0%, #552EFA 100%);
 border-radius: 25px;
 }
+.cancelbtn{
+    color:white;
+    background: linear-gradient(270deg, #BF34FB 0%, #552EFA 100%);
+border-radius: 25px;
+}
