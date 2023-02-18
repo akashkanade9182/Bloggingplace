@@ -79,3 +79,23 @@ audio {
 	width: 40px;
 	height: 40px;
 }
+.postbtn{
+	color:white;
+	padding:10px 10px;
+	 background-image: linear-gradient(270deg, #BF34FB 0%, #552EFA 100%);
+	 border-radius: 9px;
+	 display: block;
+	 width: fit-content;
+	 margin: auto;
+	 margin-top:20px;
+}
+.areabox{
+	display: -webkit-box;
+    -webkit-line-clamp:1;
+    -webkit-box-orient: vertical;  
+    overflow: scroll;
+    text-overflow: ellipsis;
+}
+.areabox::-webkit-scrollbar{
+    display:none;
+}

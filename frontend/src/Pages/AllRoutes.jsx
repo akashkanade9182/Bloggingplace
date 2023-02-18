@@ -4,6 +4,7 @@ import Singup from "./Singup"
 import Login from "./Login"
 import Homepage from "./Homepage"
 import BlogForm from "./BlogForm"
+import BlogPage from "./BlogPage"
 
 const AllRoutes = () => {
   return (
@@ -12,6 +13,7 @@ const AllRoutes = () => {
         <Route path="/signup" element={<Singup/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/newblog" element={<BlogForm/>}/>
+        <Route path="/blogpage" element={<BlogPage/>}/>
     </Routes>
   )
 }

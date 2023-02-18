@@ -34,6 +34,10 @@ const links=[
       title:"New Blog",
       path:"/newblog"
   },
+  {
+    title:"Blogs",
+    path:"/blogpage"
+},
 ]
 
 export const Navbar = () => {
@@ -62,9 +66,9 @@ export const Navbar = () => {
       initialFocusRef={firstField}
       onClose={onClose}
     >
-      <DrawerOverlay />
+      <DrawerOverlay  />
       <DrawerContent bgColor={"#272150"}>
-        <DrawerCloseButton />
+        <DrawerCloseButton color="white"/>
         <DrawerHeader color="white" textAlign={"center"} borderBottomWidth='1px'>
           Profile
         </DrawerHeader>
@@ -97,7 +101,7 @@ export const Navbar = () => {
         </DrawerBody>
 
         <DrawerFooter borderTopWidth='1px'>
-          <Button className="cancelbtn" variant='outline' mr={3} onClick={onClose}>
+          <Button className="cancelbtn" color="white" border={"none"} variant='outline' mr={3} onClick={onClose}>
             Cancel
           </Button>
          

@@ -1,0 +1,33 @@
+.gridheading{
+           font-size: 27px;
+           font-weight: bold;
+           color:white;
+           text-shadow: 0 0 10px blueviolet,
+           0 0 20px blueviolet,
+           0 0 20px blueviolet,
+           0 0 20px blueviolet,
+           0 0 20px blueviolet; 
+           animation: blink 2s linear infinite;     
+}
+@keyframes blink {
+           0%{
+                  text-shadow: 0 0  20px blueviolet,
+                  0 0  20px  blueviolet,
+                   0 0  20px blueviolet,
+                   0 0  20px blueviolet
+       
+           }
+           50%{
+             text-shadow: 0 0  10px blueviolet,
+             0 0  5px blueviolet,
+              0 0  5px blueviolet,
+              0 0  5px blueviolet
+           }
+           100%{
+             text-shadow: 0 0  20px blueviolet,
+             0 0  20px  blueviolet,
+              0 0  20px blueviolet,
+              0 0  20px blueviolet
+           }
+           
+         }

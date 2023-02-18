@@ -1,0 +1,21 @@
+.catbox:hover{
+           background-color: blueviolet;
+}
+.catheading{
+           font-size: 25px;
+           font-weight: bold;
+           text-shadow: 0 0 10px blueviolet,
+           0 0 20px blueviolet,
+           0 0 20px blueviolet,
+           0 0 20px blueviolet,
+           0 0 20px blueviolet;
+}
+.sideBox{
+           background: rgba(255, 255, 255, 0.096);
+           border: 2px solid rgba(255, 255, 255, 0.26);
+           backdrop-filter: blur(9.39533px);
+           /* Note: backdrop-filter has minimal browser support */
+           
+           border-radius: 20px; 
+           color:"white"
+}
