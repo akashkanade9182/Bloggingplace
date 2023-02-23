@@ -15,3 +15,9 @@ border-radius: 25px;
     cursor: pointer;
     border:2px solid white;
 }
+.active{
+    color:white;
+
+    transform: scale(1.2);
+    border-bottom: 1px solid white;
+}

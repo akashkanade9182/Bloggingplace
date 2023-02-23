@@ -23,22 +23,22 @@ const links=[
         title:"Homepgae",
         path:"/"
     },
-    {
-        title:"Login",
-        path:"/login"
-    },
-    {
-        title:"Signup",
-        path:"/signup"
-    },
-    {
-      title:"New Blog",
-      path:"/newblog"
-  },
+  
+  
   {
     title:"Blogs",
     path:"/blogpage"
 },
+ 
+{
+  title:"New Blog",
+  path:"/newblog"
+},
+{
+  title:"Login",
+  path:"/login"
+},
+
 ]
 
 
@@ -88,10 +88,10 @@ export const Navbar = () => {
     <Box className='navbarbox'  display={"flex"} justifyContent="space-around" alignItems={"center"}>
         {
             links.map((ele,index)=>(
-                <NavLink key={index} to={ele.path} >{ele.title}</NavLink>
+                <NavLink activeClassName="active" key={index} to={ele.path} >{ele.title}</NavLink>
             ))
         }
-        <Button  colorScheme='black' onClick={handleOpen}>
+        <Button isDisabled={!isAuth} colorScheme='black' onClick={handleOpen}>
     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="32" height="32" viewBox="0 0 24 24" stroke-width="3" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <line x1="4" y1="6" x2="20" y2="6" />
@@ -104,6 +104,7 @@ export const Navbar = () => {
       placement='right'
       initialFocusRef={firstField}
       onClose={onClose}
+      display={!isAuth && "none"}
     >
       <DrawerOverlay  />
       <DrawerContent bgColor={"#272150"}>
@@ -142,7 +143,7 @@ export const Navbar = () => {
         </DrawerBody>
 
         <DrawerFooter borderTopWidth='1px' display={"flex"} justifyContent="space-around">
-        <Button className="cancelbtn" disabled={!isAuth} onClick={handleLogout} color="white" border={"none"} variant='outline' mr={3} >
+        <Button className="cancelbtn" isDisabled={!isAuth} onClick={handleLogout} color="white" border={"none"} variant='outline' mr={3} >
          Log out
           </Button>
           <Button className="cancelbtn" color="white" border={"none"} variant='outline' mr={3} onClick={onClose}>

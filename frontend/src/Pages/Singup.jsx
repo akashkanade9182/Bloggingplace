@@ -4,6 +4,7 @@ import {Box,Heading,Input} from "@chakra-ui/react"
 import FileInput from '../Components/Signup/FileInput'
 import axios from "axios"
 import { useToast } from '@chakra-ui/react'
+import { useNavigate } from 'react-router-dom'
 
 const postData=(payload)=>{
     return axios.post("https://shy-erin-cricket-fez.cyclic.app/bloguser/signup",payload)
@@ -12,6 +13,7 @@ const postData=(payload)=>{
 const Singup = () => {
 const[data,setData]=useState({});
 const toast = useToast()
+const navigate=useNavigate()
 
     const handleInputState = (name, value) => {
 		setData((prev) => ({ ...prev, [name]: value }));
@@ -32,6 +34,7 @@ postData(data).then((r)=>{
         duration: 9000,
         isClosable: true,
       })
+      navigate("/login")
 }).catch((e)=>{
     toast({
         title: 'Error in Sign up',
