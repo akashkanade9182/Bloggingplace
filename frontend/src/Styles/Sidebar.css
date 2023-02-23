@@ -1,5 +1,6 @@
 .catbox:hover{
            background-color: blueviolet;
+           border:1px solid white
 }
 .catheading{
            font-size: 25px;

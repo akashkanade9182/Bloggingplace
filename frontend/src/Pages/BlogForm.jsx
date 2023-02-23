@@ -10,7 +10,7 @@ import { addPost } from '../Redux/AppReducer/action'
 const postData=(payload,token)=>{
 
 
-  return axios.post("http://localhost:7000/blogs/addblog",payload,{
+  return axios.post("https://shy-erin-cricket-fez.cyclic.app/blogs/addblog",payload,{
     headers: {
       'Authorization': `Bearer ${token}`,
       'Content-Type': 'application/json'
@@ -50,6 +50,7 @@ let formattedDate = `${day}/${month}/${year}`
 formattedDate=String(formattedDate)
 data.date=formattedDate;
 postData(data,token).then((r)=>{
+  setData({})
   toast({
     position: 'top-center',
     render: () => (
@@ -58,15 +59,18 @@ postData(data,token).then((r)=>{
       </div>
     ),
   })
+  console.log(r)
+ 
 }).catch((e)=>{
   toast({
-    title: 'Error in blog posting',
+    title: `${e}`,
     description: "try again later",
     status: 'error',
     duration: 9000,
     isClosable: true,
   })
 })
+console.log(data)
   }
 
   return (
@@ -94,8 +98,8 @@ postData(data,token).then((r)=>{
             <Box  w="100%" mt='20px' display={"flex"} justifyContent="space-around">
               <Box w="45%" h="auto" p="20px 0" border="1px solid blueviolet" >
               
-                <Input w="90%" color="white" mt="20px"  name="title" placeholder="Title" onChange={handleChange}/>
-                <Select name="catgeory" borderColor={"blueviolet"} onChange={handleChange} w="90%" m="auto" bg="#272150" color="white" mt="20px" >
+                <Input w="90%" color="white" value={data.title} mt="20px"  name="title" placeholder="Title" onChange={handleChange}/>
+                <Select name="category" value={data.category} borderColor={"blueviolet"} onChange={handleChange} w="90%" m="auto" bg="#272150" color="white" mt="20px" >
                   <option style={{backgroundColor:"#272150"}} value="">select catgeory</option>
                  <option style={{backgroundColor:"#272150"}} value="education">Education</option>
                  <option style={{backgroundColor:"#272150"}} value="nature">Nature</option>
@@ -110,7 +114,7 @@ postData(data,token).then((r)=>{
                  <option style={{backgroundColor:"#272150"}} value="finance">Finance</option>
                  
                 </Select>
-                <Textarea name="content" className='areabox' onChange={handleChange} color="white" textAlign={"initial"} overflowY="scroll"  w="90%" m="auto" mt="20px"  h="500px" placeholder="Enter Content" onChange={handleChange}/>
+                <Textarea name="content" value={data.content} className='areabox' onChange={handleChange} color="white" textAlign={"initial"} overflowY="scroll"  w="90%" m="auto" mt="20px"  h="500px" placeholder="Enter Content" onChange={handleChange}/>
                <Button className='postbtn' onClick={handleSubmit}>Post</Button>
               </Box>
               <Box w="45%" color="white" h="400px" >

@@ -70,3 +70,7 @@ border-radius: 12px;
     border-radius: 7px;
 
 }
+.signupbtn:hover{
+    border:1px solid white;
+    transform: scale(1.05);
+}

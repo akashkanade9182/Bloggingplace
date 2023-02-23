@@ -33,12 +33,22 @@ const reducer = (state = initialState,action) => {
         };
         case types.LOGIN_FAILURE:
           return {
+            ...state,
             isAuth:false,
             isLoading:false,
             isError:true,
             token:"",
             data:{}
           }
+          case types.LOGOUT_SUCCESS:
+            return {
+              ...state,
+              isAuth:false,
+              isLoading:false,
+              isError:false,
+              token:"",
+              data:{}
+            }
     default:return state;
   }
  

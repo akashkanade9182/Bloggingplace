@@ -20,4 +20,27 @@ dispatch({type:types.ADD_PRODUCT_SUCCESS})
 })
 }
 
-export {addPost}
+
+const getPost=(payload)=>(dispatch)=>{
+  dispatch({type:types.GET_PRODUCTS_REQUEST})
+  return axios.get("https://shy-erin-cricket-fez.cyclic.app/blogs/getallblogs",payload).then((r)=>{
+    dispatch({type:types.GET_PRODUCTS_SUCCESS,payload:r.data})
+  })
+  .catch((e)=>{
+    console.log(e)
+  })
+}
+
+const getSinglePost=(id)=>(dispatch)=>{
+  dispatch({type:types.GET_PRODUCTS_REQUEST1})
+  return axios.get(`https://shy-erin-cricket-fez.cyclic.app/blogs/getallblogs/${id}`).then((r)=>{
+    dispatch({type:types.GET_PRODUCTS_SUCCESS1,payload:r.data})
+  })
+  .catch((e)=>{
+    dispatch({type:types.GET_PRODUCTS_FAILURE1})
+  })
+}
+
+
+
+export {addPost,getPost,getSinglePost}

@@ -11,3 +11,7 @@ border-radius: 25px;
     background: linear-gradient(270deg, #BF34FB 0%, #552EFA 100%);
 border-radius: 25px;
 }
+.cancelbtn:hover{
+    cursor: pointer;
+    border:2px solid white;
+}

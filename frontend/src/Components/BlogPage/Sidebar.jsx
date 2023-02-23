@@ -43,7 +43,7 @@ const array=[
 },
 {
   title: "Technology",
-  value: "tchnology"
+  value: "technology"
 },
 {
   title:"Finance" ,
@@ -75,7 +75,7 @@ let newCategory=[...category];
   },[category,setSeachParams])
 
   return (
-    <Box w="20%" className="sideBox" borderRadius={"15px"} h="1000px"  border={"1px solid blueviolet"}>
+    <Box w="20%" className="sideBox" borderRadius={"15px"} h="fit-content"  border={"1px solid blueviolet"}>
 {
 
 array.map((ele,index)=>(

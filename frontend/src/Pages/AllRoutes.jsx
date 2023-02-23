@@ -5,6 +5,9 @@ import Login from "./Login"
 import Homepage from "./Homepage"
 import BlogForm from "./BlogForm"
 import BlogPage from "./BlogPage"
+import SingalPage from "./SingalPage"
+import ProfilePage from "./ProfilePage"
+
 
 const AllRoutes = () => {
   return (
@@ -14,6 +17,8 @@ const AllRoutes = () => {
         <Route path="/login" element={<Login/>}/>
         <Route path="/newblog" element={<BlogForm/>}/>
         <Route path="/blogpage" element={<BlogPage/>}/>
+        <Route path="/:id" element={<SingalPage/>}/>
+        <Route path="/profilepage" element={<ProfilePage/>}/>
     </Routes>
   )
 }

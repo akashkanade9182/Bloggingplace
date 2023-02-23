@@ -6,7 +6,7 @@ import axios from "axios"
 import { useToast } from '@chakra-ui/react'
 
 const postData=(payload)=>{
-    return axios.post("http://localhost:7000/bloguser/signup",payload)
+    return axios.post("https://shy-erin-cricket-fez.cyclic.app/bloguser/signup",payload)
 }
 
 const Singup = () => {
@@ -55,9 +55,9 @@ postData(data).then((r)=>{
                 handleInputState={handleInputState}
                 type="image"
                 value={data.avatar}/>
-                <Input onChange={handleChange} name="name" w="100%" mt="20px" bgColor="#272150" placeholderColor="white" border="1px solid blueviolet" placeholder="full name"/>
-                <Input onChange={handleChange} name="email" w="100%" mt="20px" bgColor="#272150" placeholderColor="white" border="1px solid blueviolet" placeholder="email"/>
-                <Input onChange={handleChange} name="password" w="100%" mt="20px" bgColor="#272150" placeholderColor="white" border="1px solid blueviolet" type="password" placeholder="password"/>
+                <Input onChange={handleChange} name="name"  color="white" w="100%" mt="20px" bgColor="#272150" placeholderColor="white" border="1px solid blueviolet" placeholder="full name"/>
+                <Input onChange={handleChange} name="email"  color="white"  w="100%" mt="20px" bgColor="#272150" placeholderColor="white" border="1px solid blueviolet" placeholder="email"/>
+                <Input onChange={handleChange} name="password"  color="white"  w="100%" mt="20px" bgColor="#272150" placeholderColor="white" border="1px solid blueviolet" type="password" placeholder="password"/>
                 <button onClick={handleSubmit} className='signupbtn'>Signup</button>
                 <p style={{color:"white",fontSize:"20px"}}>Already have account?<a href="/login">Login</a></p>
 

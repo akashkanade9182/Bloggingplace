@@ -36,8 +36,8 @@ const handleSubmit=(e)=>{
             <Heading className='heading'> Login</Heading>
             <Box w="90%" m="auto">
                 
-                <Input onChange={handleChange} name="email" w="100%" mt="20px" bgColor="#272150" border="1px solid blueviolet" placeholder="email"/>
-                <Input onChange={handleChange} name="password" w="100%" mt="20px" bgColor="#272150" border="1px solid blueviolet" type="password" placeholder="password"/>
+                <Input onChange={handleChange} name="email" w="100%" mt="20px" color="white"  bgColor="#272150" border="1px solid blueviolet" placeholder="email"/>
+                <Input onChange={handleChange} name="password" w="100%" mt="20px" color="white" bgColor="#272150" border="1px solid blueviolet" type="password" placeholder="password"/>
                 <button onClick={handleSubmit} className='signupbtn'>Login</button>
                 <p style={{color:"white",fontSize:"20px"}}>Don't have account?<a href="/signup">Singup</a></p>
 

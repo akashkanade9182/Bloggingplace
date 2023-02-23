@@ -2,9 +2,22 @@ import React from 'react'
 import {Box,Image,Heading,Button} from "@chakra-ui/react"
 import { Navbar } from '../Components/Navbar/Navbar'
 import "../Styles/Homepage.css"
+import Footer from '../Components/Footer'
+import { useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 
 
 const Homepage = () => {
+  const isAuth=useSelector(store=>store.AuthReducer.isAuth);
+  const navigate=useNavigate()
+
+  const handleNavigate=()=>{
+    if(isAuth){
+      navigate("/blogpage")
+    }else{
+      navigate("/login")
+    }
+  }
   return (
    <Box w="100%" h="1000px" p="20px 0" bgColor="#272150">
     <Navbar/>
@@ -19,7 +32,7 @@ const Homepage = () => {
              Squarespace’s built-in suite of design
               and marketing tools.
           </p>
-          <button className='startbtn'>Get Started</button>
+          <button onClick={handleNavigate} className='startbtn'>Get Started</button>
         </Box>
         <Box w="20%" h="100%" >
            <Image w="100%" h="100%" src={"Man.png"} alt="err" />
@@ -41,6 +54,7 @@ const Homepage = () => {
       </Box>
 
     </Box>
+    <Footer/>
 
    </Box>
   )

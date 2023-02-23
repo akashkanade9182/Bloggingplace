@@ -55,7 +55,7 @@ const FileInput = ({ name, label, value, type, handleInputState, ...rest }) => {
 			</button>
 		
 			
-			{value !== null && !progressShow && typeof value !== "string" && (
+			{ !progressShow && typeof value !== "string" && (
 				<button onClick={handleUpload} className={styles.Uploadbutton}>
 					Upload
 				</button>
@@ -65,7 +65,7 @@ const FileInput = ({ name, label, value, type, handleInputState, ...rest }) => {
 					<p>{progress}%</p>
 				</div>
 			)}
-			{progress === 100 && (
+			{progress === 100 && value !== null  && (
 				<div className={styles.progress_container}>
 					<img src={"https://spng.pngfind.com/pngs/s/52-528870_green-tick-clipart-benefit-green-check-mark-hd.png"} alt="check circle" className={styles.check_img} />
 				</div>
