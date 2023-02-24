@@ -7,6 +7,7 @@ import BlogForm from "./BlogForm"
 import BlogPage from "./BlogPage"
 import SingalPage from "./SingalPage"
 import ProfilePage from "./ProfilePage"
+import PrivateRoute from "./PrivateRoute"
 
 
 const AllRoutes = () => {
@@ -15,10 +16,10 @@ const AllRoutes = () => {
         <Route path="/" element={<Homepage/>}/>
         <Route path="/signup" element={<Singup/>}/>
         <Route path="/login" element={<Login/>}/>
-        <Route path="/newblog" element={<BlogForm/>}/>
-        <Route path="/blogpage" element={<BlogPage/>}/>
-        <Route path="/:id" element={<SingalPage/>}/>
-        <Route path="/profilepage" element={<ProfilePage/>}/>
+        <Route path="/newblog" element={<PrivateRoute><BlogForm/></PrivateRoute>}/>
+        <Route path="/blogpage" element={<PrivateRoute><BlogPage/></PrivateRoute>}/>
+        <Route path="/:id" element={<PrivateRoute><SingalPage/></PrivateRoute>}/>
+        <Route path="/profilepage" element={<PrivateRoute><ProfilePage/></PrivateRoute>}/>
     </Routes>
   )
 }
